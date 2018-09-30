@@ -1,0 +1,287 @@
+//Variables
+var isit=0;
+var enemySpeed = 5;
+var enemyhp = 100;
+var enemytowardsx=0;
+var enemytowardsy=0;
+var randomxval=0;
+var randomyval=0;
+var randomspeed=0;
+//Global Variables
+globalvar BillyXpos;
+globalvar BillyYpos;
+globalvar EnemyXpos;
+globalvar EnemyYpos;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    with(Billy_obj)
+{
+    BillyXpos=Billy_obj.x;
+    BillyYpos=Billy_obj.y;
+}
+EnemyXpos=Enemy_1_obj.x;
+EnemyYpos=Enemy_1_obj.y;
+xposdiff=BillyXpos-EnemyXpos;
+yposdiff=BillyYpos-EnemyYpos;
+if xposdiff<0 || yposdiff<0
+{
+    xposdiff=abs(BillyXpos-EnemyXpos);
+    yposdiff=abs(BillyYpos-EnemyYpos);
+    isit=1;
+    if isit=1
+    {
+        enemytowardsy=BillyYpos;
+        enemytowardsx=BillyXpos+50;
+    }
+}
+if xposdiff > 0 || yposdiff > 0
+{
+    isit=0;
+    if isit=0
+    {
+        enemytowardsy=BillyYpos;
+        enemytowardsx=BillyXpos-50;
+    }
+}
+    if point_distance(x,y,enemytowardsx,BillyYpos)>5 && stayhere=false
+    {
+        move_towards_point(enemytowardsx, BillyYpos, 5)
+        if EnemyXpos=(BillyXpos+50)||EnemyXpos=(BillyXpos-50)
+        {
+            stayhere=true;
+        }       
+    }
+    else
+    {
+        if point_distance(x,y,BillyXpos,enemytowardsy)>5 && stayhere=false
+        {
+        move_towards_point(EnemyXpos, enemytowardsy, EnemySpeed) 
+        }
+        else EnemySpeed=0
+        
+    }
+//Hold this position
+if stayhere=true
+{
+    move_towards_point( 50,-50, 50)
+}
+
